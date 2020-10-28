@@ -37,19 +37,25 @@ public class CityManager implements ICityService{
     @Override
     @Transactional
     public void add(City city) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.cityDal.add(city);
     }
 
     @Override
     @Transactional
     public void update(City city) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.cityDal.update(city);
     }
 
     @Override
     @Transactional
     public void delete(City city) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.cityDal.delete(city);
+    }
+
+    @Override
+    @Transactional
+    public City getById(int id) {
+        return this.cityDal.getById(id);
     }
     
 }
